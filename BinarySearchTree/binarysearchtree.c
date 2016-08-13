@@ -15,21 +15,17 @@ typedef struct BinarySearchTree {
 
 void btree_insert(BinarySearchTree *tree, int key);
 void btree_insertnode(Node *root, int key);
-void btree_insertfix(Node *node, BinarySearchTree *tree);
 void btree_preorder(BinarySearchTree *root);
 void btree_inorder(BinarySearchTree *root);
 void btree_postorder(BinarySearchTree *root);
 void btree_preordernode(Node *root);
 void btree_inordernode(Node *root);
 void btree_postordernode(Node *root);
-void btree_rotateright(Node *node, BinarySearchTree *tree);
-void btree_rotateleft(Node *node, BinarySearchTree *tree);
 Node * btree_find(BinarySearchTree *tree, int key);
 Node * btree_findnode(Node *root, int key);
 Node * btree_findminnode(Node *node);
 void btree_remove(BinarySearchTree *tree, int key);
 void btree_removenode(Node *node, BinarySearchTree *tree);
-void btree_removefix(Node *node, Node *sibling, BinarySearchTree *tree);
 
 void btree_preorder(BinarySearchTree *tree) {
 	btree_preordernode(tree->root);
